@@ -17,7 +17,7 @@ class EventIOEvent( BaseEvent ):
 
     def do_action( self ):
         for e in pygame.event.get():
-			if e.type == pygame.locals.QUIT:
+            if e.type == pygame.locals.QUIT:
                 self.env[ "pyQUIT" ] = True
                 self.env[ "gamec" ].add_event( EventEndGame( self.env , self.priority + TICKS_PER_TURN ) )
             # TODO

@@ -111,8 +111,8 @@ class EventStartGame( BaseEvent ):
         self.env[ "pyQUIT" ] = False
         # TODO
         '''
-		Init some data in env[] when the game starts, and add some events to the controllers
-		'''
+        Init some data in env[] when the game starts, and add some events to the controllers
+        '''
 
 class EventEndGame( BaseEvent ):
     def __init__( self , env , priority ):
