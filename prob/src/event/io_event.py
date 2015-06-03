@@ -17,11 +17,12 @@ class EventIOEvent( BaseEvent ):
 
     def do_action( self ):
         for e in pygame.event.get():
+			if e.type == pygame.locals.QUIT:
+                self.env[ "pyQUIT" ] = True
+                self.env[ "gamec" ].add_event( EventEndGame( self.env , self.priority + TICKS_PER_TURN ) )
             # TODO
             '''
             Check what key does player press then change the state of the game
             '''
-            pass
-
         self.env[ "uic" ].add_event( EventIOEvent( self.env , self.priority + TICKS_PER_TURN ) )
 
